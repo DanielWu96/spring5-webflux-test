@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: webflux-test-application
+  jackson:
+    #空值字段不传输
+    default-property-inclusion: non_null
+  #redis连接池配置
+  redis:
+    cluster:
+      lettuce:
+        pool:
+          # 最大活跃链接数 默认8
+          max-active: 20
+          # 最大空闲连接数 默认8
+          max-idle: 20
+          # 最小空闲连接数 默认0
+          min-idle: 0
+
+redis:
+  idfa2uid:
+    address: 127.0.0.1:16402,127.0.0.1:16396
+  mac2imei:
+    address: 127.0.0.1:16380,127.0.0.1:16389
+
+flow:
+  limit:
+    total:
+      key: DEVICE_CONVERSION_LIMIT
+      count: 8000
+    interface:
+      key: LIMIT_
