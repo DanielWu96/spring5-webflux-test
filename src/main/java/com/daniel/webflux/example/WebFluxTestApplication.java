@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @date: 2020/3/31 13:04
  */
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.daniel.webflux.example.client"})
 public class WebFluxTestApplication {
 
     public static void main(String[] args) {
