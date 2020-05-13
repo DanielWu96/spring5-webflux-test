@@ -7,7 +7,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 /**
- * reactive模式的http请求，以我的理解和feign还是有区别，feign属于声明式的web服务客户端。类似于RestTemplate
+ * reactive模式的http请求，以我的理解和feign还是有区别，feign属于声明式的web服务客户端。类似于RestTemplate,
+ * 多配置了一个reactive的负载均衡器
  * @Author: daniel
  * @date: 2020/5/13 16:18
  */
