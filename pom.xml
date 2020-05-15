@@ -14,6 +14,7 @@
         <module>test-webflux-server</module>
         <module>test-zuul-server</module>
         <module>test-webflux-cilent</module>
+        <module>test-gateway-server</module>
     </modules>
 
     <parent>

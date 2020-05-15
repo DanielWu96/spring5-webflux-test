@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: test-gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: test-webflux-server
+          uri: lb://test-webflux-server
+          predicates:
+            - Path=/webflux/**
+          filters:
+            - StripPrefix=1
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
+server:
+  port: 8004
